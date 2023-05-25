@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Text Beleuchtung</title>
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+			body {
+				background: #111;
+				font-family: "Open Sans", Impact;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			.area {
+				text-align: center;
+				font-size: 3.5em;
+				color: #fff;
+				letter-spacing: -3px;
+				font-weight: 700;
+				text-transform: uppercase;
+				animation: blur 0.75s ease-out infinite;
+				text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+			}
+			@keyframes blur {
+				from {
+					text-shadow: 0px 0px 10px #fff,
+						0px 0px 10px #fff,
+						0px 0px 25px #fff,
+						0px 0px 25px #fff,
+						0px 0px 25px #fff,
+						0px 0px 25px #fff,
+						0px 0px 25px #fff,
+						0px 0px 25px #fff,
+						0px 0px 50px #fff,
+						0px 0px 50px #fff,
+						0px 0px 50px #7b96b8,
+						0px 0px 150px #7b96b8,
+						0px 10px 100px #7b96b8,
+						0px 10px 100px #7b96b8,
+						0px 10px 100px #7b96b8,
+						0px 10px 100px #7b96b8,
+						0px -10px 100px #7b96b8,
+						0px -10px 100px #7b96b8;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="area">ACHTUNG!</div>
+		<div>
+			<p><a href="../index.html">Zurück</a></p>
+		</div>
+	</body>
+</html>
