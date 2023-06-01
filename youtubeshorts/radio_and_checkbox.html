@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Knöpfe
+		</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background-color: #8e44ad;
+			}
+			header {
+				position: fixed;
+				top: 0;
+				padding: 1em;
+				background: rgba(0,0,0,0.5);
+			}
+			h1 {
+				margin: 0 0 1em;
+			}
+			.group {
+				display: flex;
+				align-items: center;
+				margin-bottom: 2em;
+			}
+			input[type="checkbox"], input[type="radio"] {
+				position: absolute;
+				opacity: 0;
+				z-index: -1;
+			}
+			label {
+				position: relative;
+				margin-right: 1em;
+				padding-left: 2em;
+				padding-right: 1em;
+				line-height: 2;
+				cursor: pointer;
+				&:before {
+					box-sizing: border-box;
+					content: " ";
+					position: absolute;
+					top: 0.3em;
+					left: 0;
+					display: block;
+					width: 1.4em;
+					height: 1.4em;
+					border: 2px solid white;
+					border-radius: 0.25em;
+					z-index: -1;
+				}
+			}
+			input[type="radio"]+label::before {
+				border-radius: 1em;
+			}
+			input[type="checkbox"]:checked+label,input[type="radio"]:checked+label {
+				padding-left: 1em;
+				color: white;
+				&:before {
+					top: 0;
+					width: 100%;
+				}
+			}
+			label, label::before {
+				-webkit-transition: 0.25s all ease;
+				-moz-transition: 0.25s all ease;
+				-o-transition: 0.25s all ease;
+				transition: 0.25s all ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="../index.html" style="color: black;">Zurück</a>
+			<h2>Radio Buttons</h2>
+			<div class="group">
+				<input type="radio" name="rb" id="rb1" />
+				<label for="rb1">Check this</label>
+			</div>
+			<h2>Checkbox</h2>
+			<div class="group">
+				<input type="checkbox" name="cb" id="cb1" />
+				<label for="cb1">Check this</label>
+			</div>
+		</div>
+	</body>
+</html>
