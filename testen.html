@@ -1,20 +1,85 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="standard.css"/>
-		<title>Testen</title>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<a href="index.html">Home</a>
-			</nav>
-		</header>
-		<h1>Testen</h1>
-		<p></p>
-		<footer>
-			Last Edit: 2023-08-04
-		</footer>
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="standard.css" />
+	<title>Testen</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href="index.html">Home</a>
+		</nav>
+	</header>
+	<h1>Testen in der Universität</h1>
+	<p>
+		In der Universität wurde einem das Testen mehr oder weniger nur theoretisch erklärt,
+		denn praktisch gab es nur wenige Möglichkeiten dies anzuwenden. Selbst in Kursen,
+		wo vergleichsweise viel programmiert werden muss,
+		wird das schreiben von Tests vernachlässigt.
+	</p>
+	<p>
+		Warum? Relativ einfach: Tests bringen keine gute Noten.
+		Für einen Studenten ist der Nutzen von Tests effektiv 0, da sie keine Ergebnisse produzieren,
+		die vom Dozenten oder vom Lehrstuhl bewertet werden können.
+	</p>
+	<h2>Unit-Tests</h2>
+	<p>
+		Unit-Tests sind die erste Stufe mit der man in Berührung kommt. Es muss auch geklärt werden,
+		was als "Unit" innerhalb einer Programmiersprache gilt und für gewöhnlich versteht man folgendes:
+		<b>Die kleinsten prüfbaren Einheiten, welche man Ausführen kann.</b>
+	</p>
+	<p>
+		Wie viele Unit-Tests ich in der Universität geschrieben habe? Ähm... Null? Wenn man bedenkt,
+		wie man ganz schnell ganz viele solcher Tests benötigt, kann an einem einfach Beispiel gezeigt werden.
+	</p>
+	<code>
+		<pre>
+public static boolean isPrime(long number) {
+	if (number &lt;= 1) {
+		return false;
+	} else if (number == 2) {
+		return true;
+	} else if ((number & 1) == 0) {
+		return false;
+	} else {
+		for (long div = 3; div * div &lt;= number; div += 2) {
+			if (number % div == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+}
+		</pre>
+	</code>
+	<p>
+		Auf dem ersten Blick erscheint jedem sofort erklärlich, was diese Methode tut: Sie überprüft,
+		ob die übergebene Zahl eine Primzahl ist. Doch dafür müssen folgende allgemeine Prüffälle her:
+	<ul>
+		<li>Eine Zahl, die kleiner oder gleich 1 ist.</li>
+		<li>Die Zahl 2, da sie die einzig gerade Primzahl ist.</li>
+		<li>Eine gerade Zahl größer als zwei.</li>
+		<li>Eine ungerade Zahl, die durch eine andere kleinere ungerade Zahl teilbar ist.</li>
+		<li>Eine ungerade Zahl, die NICHT durch eine andere kleinere ungerade Zahl teilbar ist.</li>
+	</ul>
+	Eine mögliche Menge an Zahlen, die diese Punkte erfüllt, wäre zum Beispiel 1, 2, 3, 4 und 9.
+	Und diese Menge deckt gerade alle Anweisungen dieser Methode ab! Anders ausgedrückt,
+	sie erreicht das C<sub>0</sub>-Kriterium. Für das C<sub>1</sub>-Kriterium fehlt jedoch eine Zahl,
+	bei dem die <code>if</code>-Abfrage innerhalb der Schleife mindestens einmal zu <code>false</code>
+	ausgewertet wird. Die erste Zahl dafür wäre 11 und die Menge enthält jetzt sechs Zahlen.
+	Das C<sub>2</sub>-Kriterium lässt sich nur in der Variante b oder c erreichen,
+	da die Variante a bei Schleifen unmöglich wird. Mit den vorherigen Zahlen ist bereits ein Teil der b-Variante erfüllt:
+	Alle Pfade, die bei einem einmaligen Schleifendurchlauf auftreten können, sind abgedeckt.
+	Um alle Pfade bei einem zweimaligen Durchlaufen abzudecken, brauchen wir zwei weitere Zahlen:
+	Als erstes 25, da diese durch 5 aber nicht durch 3 teilbar ist. Und 29, die erste Primzahl,
+	die größer als 25 ist. Es kommen somit zwei weitere Zahlen hinzu und die Menge enthält jetzt acht Zahlen.
+	</p>
+	<footer>
+		Last Edit: 2023-08-04
+	</footer>
+</body>
+
 </html>
