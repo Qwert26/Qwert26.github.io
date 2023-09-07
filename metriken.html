@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="standard.css" />
+	<title>Metriken</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href="index.html">Home</a>
+		</nav>
+	</header>
+	<h1>Metriken</h1>
+	<p>
+		Metriken sollen etwas objektiv messen und diese Messungen müssen dann interpretiert werden.
+	</p>
+	<h2>Beispiele</h2>
+	<h3>Codezeilen</h3>
+	<p>
+		Die Idee hier ist relativ einfach: Wie viele Codezeilen braucht mein Programm insgesamt?
+		In den Zeiten von Lochkarten war dies äquivalent mit der Frage,
+		wie viele Lochkarten für das Programm gestanzt werden mussten. Weniger war hier besser.
+		Im digitalen muss man hier Aufteilen zwischen logischen und physikalischen Zeilen:
+		Man kann das komplette Programm in einer einzigen Zeile schreiben (Fühl dich angesprochen,
+		JavaScript!), aber dies ändert nicht die Anzahl der logischen Zeilen und man macht sich das VCS zum Feind.
+	</p>
+	<h3>Codestruktur</h3>
+	<p>
+		Jede höhere Programmiersprache besitzt eine Struktur, die man folgt.
+		Solche strukturellen Metriken können sein:
+	</p>
+		<ul>
+			<li>Anzahl Funktionen, Klassen, Schnittstellen, usw.</li>
+			<li>Tiefste Verschachtelung einer Funktion.</li>
+			<li><b>Zyklomatische Komplexität</b> von McCabe</li>
+			<li><b>ABC-Metrik</b> basierend auf Zuweisungen, Verzweigungen und Bedingungen.</li>
+			<li>Kopplungen und Kohäsionen zwischen Klassen und Schnittstellen.</li>
+		</ul>
+	<h2>"Meta-Gaming" von Metriken</h2>
+	<p>
+		"Meta-Gaming" bezeichnet das Verhalten eines Spielers, welches zwar 100%-regelkonform ist,
+		aber keinen Wert auf das Wohlbefinden legt. Unternehmen, welche Metriken benutzen um die
+		Produktivität ihrer Mitarbeiter zu erhöhen, laufen Gefahr, dass diese zu "Meta-Gamer" werden.
+		Diese Mitarbeiter arbeiten nicht mehr für das Wohl des Unternehmens, sondern nur noch für die
+		Befriedigung der Metriken, mit denen sie gemessen werden.
+	</p>
+	<p>
+		Das Nutzen der Metrik "Umsatz" als Bewertungsbasis für den Verkauf kann dazu führen,
+		dass Verkäufer den Kunden Lügen auftischen, um mehr Umsatz für sich zu generieren.
+		Dies hat dann in einigen realen Fällen dazu geführt,
+		dass die besagten Kunden sich betrogen fühlten und dem Unternehmen den Rücken kehrten.
+	</p>
+	<p>
+		Das Nutzen von "Testabdeckung" kann dazu führen, dass automatisierte Tests geschrieben werden,
+		welche keine einzige Überprüfung am Code durchführen.
+	</p>
+	<footer>
+		Last Edit: 2023-08-04
+	</footer>
+</body>
+
+</html>
