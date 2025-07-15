@@ -1,22 +1,46 @@
 body>header {
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
-	background-color: white;
+	background-color: red;
 }
 
 body>footer {
 	position: fixed;
 	bottom: 0;
+	left: 0;
 	width: 100%;
-	background-color: white;
+	background-color: blue;
+	direction: rtl;
+}
+
+body>aside {
+	position: fixed;
+	height: 100%;
+	left: 0;
+	width: 10%;
+	background-color: black;
+	color: white;
+	overflow: auto;
+}
+
+aside a:link {
+	color: white;
+}
+
+aside a:visited {
+	color: silver;
+}
+
+body>main {
+	margin-left: 10%
 }
 
 @media (prefers-color-scheme: dark) {
 	html {
 		filter: invert(100%);
 	}
-
 	img {
 		filter: invert(100%);
 	}
