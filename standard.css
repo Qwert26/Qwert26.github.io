@@ -2,6 +2,7 @@ body>header {
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	width: 100%;
 	background-color: red;
 	color: black;
@@ -11,6 +12,7 @@ body>footer {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	right: 0;
 	width: 100%;
 	background-color: blue;
 	color: white;
@@ -27,15 +29,23 @@ body>aside {
 	overflow: auto;
 }
 
+header a:link {
+	color: black;
+}
+
 aside a:link {
 	color: white;
+}
+
+header a:visited {
+	color: gray;
 }
 
 aside a:visited {
 	color: silver;
 }
 
-body>main {
+body:has(aside)>main {
 	margin-left: 10%
 }
 
@@ -43,6 +53,7 @@ body>main {
 	html {
 		filter: invert(100%);
 	}
+
 	img {
 		filter: invert(100%);
 	}
