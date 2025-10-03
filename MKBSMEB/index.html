@@ -24,16 +24,34 @@
 			<li>Das Layout besteht zum Großteil aus Klemmbausteinen. <b>Es wird nicht zwischen Herstellern
 					unterschieden!</b></li>
 			<li>Die Steuerelektronik sollte nicht zu einem "<em lang="en">Vendor-Lock</em>" führen.</li>
-			<li>Die Züge sollten bei Bedarf den ganzen Tag fahren können.</li>
+			<li>Die Steuerelektronik muss einen modularen Aufbau unterstützen.<ul>
+					<li>Dies führt leider zum automatischen Ausschluss von S88-Systemen, da hier die Reihenfolge der
+						Komponenten eine Rolle spielt.</li>
+					<li>S88N wird dadurch auch ausgeschlossen, da es nur eine andere physikalische Verkabelung aufweißt.
+					</li>
+					<li>Die Zentrale von<abbr title="Electronic Solutions Ulm">ESU</abbr>, die ECoS, wird dadurch auch
+						ausgeschlossen, da der ECoSLink kein offener Bus ist.</li>
+				</ul>
+			</li>
+			<li>Die Züge sollten bei Bedarf den ganzen Tag fahren können.<ul>
+					<li>Dies schließt Batterie- und Akkuboxen aus.</li>
+				</ul>
+			</li>
+			<li>Es gibt keine Beschränkung von gleichzeitig fahrenden Zügen.<ul>
+					<li>Dies schließt Bluetooth-Verbindungen aus, da hier eine Beschränkung von 8 gleichzeitig aktiven
+						Teilnehmern herrscht. Da die Zentrale immer aktiv ist, würden maximal 7 Loks gleichzeitig fahren
+						dürfen.</li>
+				</ul>
+			</li>
 		</ul>
 		</p>
 		<p>Hier die aktuelle <a href="lokliste.html">Liste der Lokomotiven</a>. Da einige Loks einen Zug mit passenden
-			Steuerwagen ziehen, oder schieben, gibt es auch eine <a href="steuerwagenliste.html">Lister der
+			Steuerwagen ziehen, oder schieben, gibt es auch eine <a href="steuerwagenliste.html">Liste der
 				Steuerwagen</a>.</p>
 		<p><a href="bautips.html">Tipps für das Bauen</a> finden sich hier.</p>
 	</main>
 	<footer lang="en">
-		Last Edit: 2025-08-01
+		Last Edit: 2025-08-21
 	</footer>
 </body>
 
