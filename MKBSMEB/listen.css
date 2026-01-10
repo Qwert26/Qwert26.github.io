@@ -19,3 +19,9 @@ main>section>hgroup {
 	grid-column-start: 1;
 	grid-column-end: -1;
 }
+
+@media (max-width: 750px) {
+	main {
+		grid-template-columns: 1fr;
+	}
+}

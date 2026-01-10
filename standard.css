@@ -72,6 +72,11 @@ header a:visited {
 aside a:visited {
 	color: lightgrey;
 }
+p>aside {
+	float: right;
+	width: fit-content;
+	height: fit-content;
+}
 
 @media (prefers-color-scheme: dark) {
 	html {
