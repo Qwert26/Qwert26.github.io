@@ -12,6 +12,7 @@ body {
 	padding: 0;
 	column-gap: 8px;
 	row-gap: 8px;
+	background-color: white;
 }
 
 body>header {
@@ -72,6 +73,7 @@ header a:visited {
 aside a:visited {
 	color: lightgrey;
 }
+
 p>aside {
 	float: right;
 	width: fit-content;
@@ -79,12 +81,31 @@ p>aside {
 }
 
 @media (prefers-color-scheme: dark) {
-	html {
-		filter: invert(100%);
+	body {
+		background-color: black;
 	}
 
-	img {
-		filter: invert(100%);
+	body>header {
+		background-color: darkred;
+		color: white;
+	}
+
+	body>footer {
+		background-color: darkblue;
+		color: white;
+	}
+
+	body>main {
+		background-color: black;
+		color: white;
+	}
+
+	header a:link {
+		color: white;
+	}
+
+	header a:visited {
+		color: lightgray;
 	}
 }
 
